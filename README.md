@@ -54,10 +54,9 @@ Demo in Telegram: [@UnArchiveBot](https://t.me/UnArchiveBot)
 
 ## Setting up config file
 <details>
-    <summary><b>Click Here For Details</b></summary>
-    <br>
-    <b>Required Variables:</b>
-
+    <summary><b>Click Here For Details</b></summary><br>
+    <b>Required Variables:</b><br><br>
+    
 - `BOT_TOKEN`: Telegram Bot Token. Example: `3asd2a2sd32:As56das65d2as:ASd2a6s3d26as`
 - `APP_ID`: Telegram App ID. Example: `32523453`
 - `API_HASH`: Telegram Api Hash. Example: `asdasdas6d265asd26asd6as1das`
