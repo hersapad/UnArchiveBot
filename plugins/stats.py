@@ -5,9 +5,9 @@ import shutil
 import logging
 import time
 from helper_func.auth_user_check import AuthUserCheck
-
-from helper_func.progress import humanbytes, ReadableTime
 from helper_func.force_sub import ForceSub
+from helper_func.progress import humanbytes, ReadableTime
+
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
     level=logging.INFO)

@@ -25,8 +25,10 @@ async def ForceSub(bot: Client, event: Message):
         try:
             invite_link = await bot.create_chat_invite_link(
                 chat_id=(
-                    int(Config.FORCE_SUBSCRIBE_CHANNEL) if Config.FORCE_SUBSCRIBE_CHANNEL.startswith("-100") else Config.FORCE_SUBSCRIBE_CHANNEL)
-                )
+                    int(Config.FORCE_SUBSCRIBE_CHANNEL) if Config.FORCE_SUBSCRIBE_CHANNEL.startswith("-100") else Config.FORCE_SUBSCRIBE_CHANNEL
+                ),
+                member_limit = 1
+            )
         except FloodWait as e:
             await asyncio.sleep(e.x)
             fix_ = await ForceSub(bot, event)

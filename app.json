@@ -1,6 +1,6 @@
 {
-    "name": "Telegram UnArchiver Bot",
-    "description": "Telegram UnArchiver Bot. Demo @UnArchiveBot",
+  "name": "Telegram UnArchiver Bot",
+  "description": "Telegram UnArchiver Bot. Demo @UnArchiveBot",
     "keywords": [
       "telegram",
       "unzip",
@@ -49,6 +49,12 @@
         "required": true
       }
     },
-    "stack": "container"
+    "stack": "container",
+    "formation": {
+      "worker": {
+        "quantity": 1,
+        "size": "free"
+      }
+    }
   }
   

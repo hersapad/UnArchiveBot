@@ -223,7 +223,6 @@ async def unarchiver(client, message):
                         LOGGER.info("dl_full_file_path: " + dl_full_file_path)
                         LOGGER.info("path: " + path)
                         toexec = "cd \"" + path + "\" && pextract \"" + onlyfilename  + "\" " + password[1]
-                        # i know a best way exist. do pr
                         archive_result = process = subprocess.Popen(
                             toexec, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
                         stdout, stderr = process.communicate()
@@ -240,7 +239,7 @@ async def unarchiver(client, message):
                     else:
                         LOGGER.info("dl_full_file_path: " + dl_full_file_path)
                         LOGGER.info("path: " + path)
-                        toexec = "cd \"" + path + "\" && pextract \"" + onlyfilename + "\""
+                        toexec = "cd \"" + path + "\" && nextract \"" + onlyfilename + "\""
                         archive_result = process = subprocess.Popen(
                             toexec, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
                         stdout, stderr = process.communicate()
