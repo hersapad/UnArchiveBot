@@ -2,7 +2,7 @@ import os
 from config import Config
 from pyrogram import Client, filters
 from helper_func.auth_user_check import AuthUserCheck
-from helper_func.force_sub import ForceSub, ForceSub
+from helper_func.force_sub import ForceSub
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
