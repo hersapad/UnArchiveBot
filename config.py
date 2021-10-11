@@ -18,6 +18,9 @@ class Config:
     API_HASH = os.environ.get('API_HASH', '')
     BOT_USERNAME = os.environ.get('BOT_USERNAME','')
     if not BOT_USERNAME.startswith('@'): BOT_USERNAME = '@' + BOT_USERNAME # bu satıra dokunmayın.
+    FORCE_SUBSCRIBE_CHANNEL = os.environ.get('FORCE_SUBSCRIBE_CHANNEL','') # force subscribe channel link.
+    if FORCE_SUBSCRIBE_CHANNEL == "" or FORCE_SUBSCRIBE_CHANNEL == " " or FORCE_SUBSCRIBE_CHANNEL == None: FORCE_SUBSCRIBE_CHANNEL = None # bu satıra dokunmayın.
+    LOGGER.info(f"FORCE_SUBSCRIBE_CHANNEL: {FORCE_SUBSCRIBE_CHANNEL}") # debug
     # requireds -
 
     # commands +
@@ -94,6 +97,13 @@ class Config:
         "🍎 Boyut / Size: `{}`\n🔥 [Kaynak / Source]({})\n✅ Başarılı / Success: `{}`\n❌ Başarısız / Unsucces: `{}`")
     CLEAR_STR = os.environ.get('CLEAR_STR',
         "🇬🇧 You\'re clean like a baby now. I deleted your files.\n🇹🇷 Şimdi bebek gibi tertemizsin. Dosyalarını sildim.")
+    JOIN_CHANNEL_STR = os.environ.get('JOIN_CHANNEL_STR',
+        "Merhaba / Hi {}\n\n" + \
+        "🇬🇧 First subscribe my channel from button, then send /start again.\n" + \
+        "🇹🇷 Önce butondan kanala abone ol, sonra bana /start yaz.")
+    YOU_ARE_BANNED_STR = os.environ.get('YOU_ARE_BANNED_STR',
+        "🇬🇧 You are Banned to use me.\n🇹🇷 Banlanmışsın ezik.\n\nDestek / Support: {}")
+    JOIN_BUTTON_STR = os.environ.get('JOIN_BUTTON_STR', "🇬🇧 Join / 🇹🇷 Katıl")
     # non-required -
 
     botStartTime = time.time() # dont touch

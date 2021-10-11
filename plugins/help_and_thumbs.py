@@ -2,6 +2,7 @@ import os
 from config import Config
 from pyrogram import Client, filters
 from helper_func.auth_user_check import AuthUserCheck
+from helper_func.force_sub import ForceSub, ForceSub
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
@@ -9,6 +10,11 @@ from PIL import Image
 @Client.on_message(filters.command(Config.HELP_COMMANDS))
 async def start(bot, update):
     if await AuthUserCheck(update.chat.id, update.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(bot, update)
+        if FSub == 400:
+            return
+        # force subscribe -
         await update.reply_text(Config.START_TEXT_STR, reply_to_message_id = update.message_id)
     else:
         await update.reply_text(Config.UNAUTHORIZED_TEXT_STR, reply_to_message_id = update.message_id)
@@ -16,6 +22,11 @@ async def start(bot, update):
 @Client.on_message(filters.command(Config.SAVE_THUMB_COMMAND))
 async def save_thumb(client, message):
     if await AuthUserCheck(message.chat.id, message.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(client, message)
+        if FSub == 400:
+            return
+        # force subscribe -
         thumbnail_location = os.path.join(Config.DOWNLOAD_DIR, "thumbnails")
         thumb_image_path = os.path.join(
             thumbnail_location, str(message.from_user.id) + ".jpg"
@@ -54,6 +65,11 @@ async def save_thumb(client, message):
 @Client.on_message(filters.command(Config.CLEAR_THUMB_COMMAND))
 async def clear_thumb(client, message):
     if await AuthUserCheck(message.chat.id, message.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(client, message)
+        if FSub == 400:
+            return
+        # force subscribe -
         thumbnail_location = os.path.join(Config.DOWNLOAD_DIR, "thumbnails")
         thumb_image_path = os.path.join(
             thumbnail_location, str(message.from_user.id) + ".jpg"
@@ -69,6 +85,11 @@ async def clear_thumb(client, message):
 @Client.on_message(filters.command(Config.SHOW_THUMB_COMMAND))
 async def show_thumb(client, message):
     if await AuthUserCheck(message.chat.id, message.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(client, message)
+        if FSub == 400:
+            return
+        # force subscribe -
         thumbnail_location = os.path.join(Config.DOWNLOAD_DIR, "thumbnails")
         thumb_image_path = os.path.join(
             thumbnail_location, str(message.from_user.id) + ".jpg"

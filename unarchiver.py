@@ -3,7 +3,6 @@ import os
 from config import Config
 from pyrogram import idle
 import pyrogram
-import time
 LOGGER = logging.getLogger(__name__)
 
 

@@ -43,6 +43,7 @@ Demo in Telegram: [@UnArchiveBot](https://t.me/UnArchiveBot)
 - Clear all files from server
 - Natural sorting while sending files. More info: `https://en.wikipedia.org/wiki/Natural_sort_order`
 - Owner shell
+- Force users to join channel or group
 - Auth only for some users or make public
 - One process per user (for bot performance)
 - Changeable upload / download texts, commands, contact adress etc.
@@ -67,6 +68,7 @@ Demo in Telegram: [@UnArchiveBot](https://t.me/UnArchiveBot)
 <b>Not Required Variables:</b>
 
 - `ONE_PROCESS_PER_USER`: One process per user. Improves bot performance. Example: `0` (False) or `1` (True). Default: `1`
+- `FORCE_SUBSCRIBE_CHANNEL`: Force subscribe channel or group. Example: `-1001327202752` or `@HuzunluArtemis`. To disable leave it empty. Do not forget to make admin your bot in forcesub channel or group.
 - `FORCE_DOC_UPLOAD`: Force send all files as document. Without compress videos, photos etc. Example: `0` (False) or `1` (True). Default: `0`
 - `CHANNEL_OR_CONTACT`: Your bot's channel or contact username. Example: `HuzunluArtemis`
 - `SLEEP_TIME_BETWEEN_SEND_FILES`: Sleep time between files. For floodwait. Recommended: `2`
@@ -92,6 +94,9 @@ Demo in Telegram: [@UnArchiveBot](https://t.me/UnArchiveBot)
 - `UPLOAD_SUCCESS`: Upload success string. See `config.py`.
 - `CLEAR_STR`: Clearme response string. See `config.py`.
 - `ONE_PROCESS_PER_USER_STR`: One process for one user response string. See `config.py`.
+- `JOIN_CHANNEL_STR`: Join channel warning string. See `config.py`.
+- `YOU_ARE_BANNED_STR`: Banned user string. See `config.py`.
+- `JOIN_BUTTON_STR`: Join button string. See `config.py`.
 
 </details>
 
@@ -102,7 +107,8 @@ Demo in Telegram: [@UnArchiveBot](https://t.me/UnArchiveBot)
   <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
   <img src="https://www.gnu.org/graphics/gplv3-127x51.png" alt="GNU GPLv3 Image">
 </a>
-<br><br>
+<br>
+<br>
 UnArchiveBot is Free Software: You can use, study share and improve it at your
 will. Specifically you can redistribute and/or modify it under the terms of the 
   <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License</a> 

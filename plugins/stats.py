@@ -5,8 +5,9 @@ import shutil
 import logging
 import time
 from helper_func.auth_user_check import AuthUserCheck
-from helper_func.progress import humanbytes, ReadableTime
 
+from helper_func.progress import humanbytes, ReadableTime
+from helper_func.force_sub import ForceSub
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler('log.txt'), logging.StreamHandler()],
     level=logging.INFO)
@@ -15,6 +16,11 @@ LOGGER = logging.getLogger(__name__)
 @Client.on_message(filters.command(Config.STATS_COMMAND))
 async def shell(client, message):
     if await AuthUserCheck(message.chat.id, message.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(client, message)
+        if FSub == 400:
+            return
+        # force subscribe -
         try:
             currentTime = ReadableTime(time.time() - Config.botStartTime)
             total, used, free = shutil.disk_usage('.')

@@ -1,5 +1,4 @@
 from os import path
-import os
 from helper_func.get_base_name import get_base_name
 
 async def new_filename_gen(filePath):

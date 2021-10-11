@@ -22,10 +22,16 @@ from helper_func.auth_user_check import AuthUserCheck
 from helper_func.new_filename_gen import new_filename_gen
 from helper_func.absolute_paths import absolute_paths
 from helper_func.progress import humanbytes
+from helper_func.force_sub import ForceSub
 
 @Client.on_message(filters.command(Config.UNZIP_COMMAND))
 async def unarchiver(client, message):
     if await AuthUserCheck(message.chat.id, message.from_user.id):
+        # force subscribe +
+        FSub = await ForceSub(client, message)
+        if FSub == 400:
+            return
+        # force subscribe -
         if message.reply_to_message is not None:
             try:
                 filenameformessage = message.reply_to_message.document.file_name
@@ -217,6 +223,7 @@ async def unarchiver(client, message):
                         LOGGER.info("dl_full_file_path: " + dl_full_file_path)
                         LOGGER.info("path: " + path)
                         toexec = "cd \"" + path + "\" && pextract \"" + onlyfilename  + "\" " + password[1]
+                        # i know a best way exist. do pr
                         archive_result = process = subprocess.Popen(
                             toexec, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
                         stdout, stderr = process.communicate()
