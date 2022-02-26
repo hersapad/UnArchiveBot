@@ -52,14 +52,14 @@ class Config:
         "📥 Kalan Boyut / Remaining: {3}\n⚡️ Anlık Hız / Speed: {4}/s\n⌛️ Geçen Süre / Passed: {5}\n⏳ Kalan Süre / Remaining: {6}`"
     FORCE_DOC_UPLOAD = int(os.environ.get('FORCE_DOC_UPLOAD', 0))
     ONE_PROCESS_PER_USER = int(os.environ.get('ONE_PROCESS_PER_USER', 1)) # for stability
-    UNAUTHORIZED_TEXT_STR = os.environ.get('UNAUTHORIZED_TEXT_STR', "🇹🇷 Bu bot senin için değil ezik.\n🇬🇧 This bot not for you.")
+    UNAUTHORIZED_TEXT_STR = os.environ.get('UNAUTHORIZED_TEXT_STR', "🇹🇷 Bot yalnızca ilgili grupta kullanılabilir.\n🇬🇧 This bot not for you.")
     PROGRESSBAR_LENGTH = int(os.environ.get('PROGRESSBAR_LENGTH', 25))
     ONE_PROCESS_PER_USER_STR = os.environ.get('ONE_PROCESS_PER_USER_STR',
         f"🇬🇧 1 user = 1 process.\nYou can clear your all files with /{CLEARME_COMMAND[0]}," + \
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared. Be careful." + \
         f"\n\n🇹🇷 1 kullanıcı = 1 işlem.\nTüm dosyalarınızı /{CLEARME_COMMAND[0]} ile temizleyebilirsiniz." + \
         " İşlem sıranız temizlenir. Şu an yüklenen bir şey varsa temizlenir. Dikkatli olun.")
-    CHANNEL_OR_CONTACT = os.environ.get('CHANNEL_OR_CONTACT', "HuzunluArtemis") # give your public channel or contact username
+    CHANNEL_OR_CONTACT = os.environ.get('CHANNEL_OR_CONTACT', "Divan") # give your public channel or contact username
     SLEEP_TIME_BETWEEN_SEND_FILES = int(os.environ.get('SLEEP_TIME_BETWEEN_SEND_FILES', 2)) 
     SHOW_PROGRESS_MIN_SIZE_DOWNLOAD = int(os.environ.get('SHOW_PROGRESS_MIN_SIZE_DOWNLOAD', 12*1024*1024)) # for speedy
     DOWNLOADING_STR = os.environ.get('DOWNLOADING_STR',
