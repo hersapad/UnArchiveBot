@@ -13,7 +13,7 @@ async def shell(client, message):
         try:
             cmd = message.text.split(' ', 1)
             if len(cmd) == 1:
-                await message.reply_text('🇬🇧 No command to execute was given.\n\n🇹🇷 Boşluk bırakıp komut gir zırcahil seni.',
+                await message.reply_text('🇬🇧 No command to execute was given.\n\n🇹🇷 Boşluk bırakıp komut giriniz.',
                     reply_to_message_id = message.message_id)
                 return
             cmd = cmd[1]
