@@ -59,7 +59,7 @@ class Config:
         " Your process quee will be cleared. If anything is uploading at now, it will be cleared. Be careful." + \
         f"\n\n🇹🇷 1 kullanıcı = 1 işlem.\nTüm dosyalarınızı /{CLEARME_COMMAND[0]} ile temizleyebilirsiniz." + \
         " İşlem sıranız temizlenir. Şu an yüklenen bir şey varsa temizlenir. Dikkatli olun.")
-    CHANNEL_OR_CONTACT = os.environ.get('CHANNEL_OR_CONTACT', "Divan") # give your public channel or contact username
+    CHANNEL_OR_CONTACT = os.environ.get('CHANNEL_OR_CONTACT', " Divan") # give your public channel or contact username
     SLEEP_TIME_BETWEEN_SEND_FILES = int(os.environ.get('SLEEP_TIME_BETWEEN_SEND_FILES', 2)) 
     SHOW_PROGRESS_MIN_SIZE_DOWNLOAD = int(os.environ.get('SHOW_PROGRESS_MIN_SIZE_DOWNLOAD', 12*1024*1024)) # for speedy
     DOWNLOADING_STR = os.environ.get('DOWNLOADING_STR',
