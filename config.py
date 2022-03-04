@@ -48,8 +48,8 @@ class Config:
     DOWNLOAD_DIR = os.environ.get('DOWNLOAD_DIR', 'downloads')
     FINISHED_PROGRESS_STR = os.environ.get('FINISHED_PROGRESS_STR','●')
     UN_FINISHED_PROGRESS_STR = os.environ.get('UN_FINISHED_PROGRESS_STR','○')
-    PROGRESS = "`🔥 Biten Yüzde / Percent: % {0}\n📀 Toplam Boyut / Total Size: {1}\n📤 Biten Boyut / Finished: {2}\n" + \
-        "📥 Kalan Boyut / Remaining: {3}\n⚡️ Anlık Hız / Speed: {4}/s\n⌛️ Geçen Süre / Passed: {5}\n⏳ Kalan Süre / Remaining: {6}`"
+    PROGRESS = "`🔥 Çıkan civcivler / Percent: % {0}\n📀 Toplam yumurta sayısı / Total Size: {1}\n📤 Çıkan civcivler / Finished: {2}\n" + \
+        "📥 Kalan yumurtalar / Remaining: {3}\n⚡️ Anlık yumurtlama hızı / Speed: {4}/s\n⌛️ Geçen Süre / Passed: {5}\n⏳ Kalan Süre / Remaining: {6}`"
     FORCE_DOC_UPLOAD = int(os.environ.get('FORCE_DOC_UPLOAD', 0))
     ONE_PROCESS_PER_USER = int(os.environ.get('ONE_PROCESS_PER_USER', 1)) # for stability
     UNAUTHORIZED_TEXT_STR = os.environ.get('UNAUTHORIZED_TEXT_STR', "🇹🇷 Bot yalnızca ilgili grupta kullanılabilir.\n🇬🇧 This bot not for you.")
@@ -63,14 +63,14 @@ class Config:
     SLEEP_TIME_BETWEEN_SEND_FILES = int(os.environ.get('SLEEP_TIME_BETWEEN_SEND_FILES', 2)) 
     SHOW_PROGRESS_MIN_SIZE_DOWNLOAD = int(os.environ.get('SHOW_PROGRESS_MIN_SIZE_DOWNLOAD', 12*1024*1024)) # for speedy
     DOWNLOADING_STR = os.environ.get('DOWNLOADING_STR',
-        "**🇹🇷 İndiriliyor / 🇬🇧 Downloading:**\n\n🎯 Name / Ad: `{}`\n❄️ Size / Boyut: `{}`\n🔑 Password / Parola: {}")
+        "**🇹🇷 Tavuklar kuluçkaya yatıyor / 🇬🇧 Downloading:**\n\n🎯 Name / Ad: `{}`\n❄️ Size / Boyut: `{}`\n🔑 Password / Parola: {}")
     UPLOADING_STR = os.environ.get('UPLOADING_STR',
-        "**🇹🇷 Yükleniyor / 🇬🇧 Uploading:**\n\n🎯 Kaynak / Source: `{}`\n" + \
-        "🍌 Kaynak Boyutu / Source Size: `{}`\n🔑 Password / Parola: {}\n\n🦋 Anlık Dosya / File Now: `{}`\n" + \
-        "❄️ Size Now / Anlık Boyut: `{}`\n🥕 File Turn / Dosya Sırası: `{}`")
+        "**🇹🇷 Tavuklar yumurtluyor / 🇬🇧 Uploading:**\n\n🎯 Kaynak / Source: `{}`\n" + \
+        "🍌 Yumurta Boyutu / Source Size: `{}`\n🔑 Password / Parola: {}\n\n🦋 Anlık civciv sayısı / File Now: `{}`\n" + \
+        "❄️ Size Now / Anlık yumurta sayısı: `{}`\n🥕 File Turn / Dosya Sırası: `{}`")
     DOWNLOAD_SUCCESS = os.environ.get('DOWNLOAD_SUCCESS',
-        "🇹🇷 Dosya indirildi! / 🇬🇧 File downloaded.\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`" + \
-        "\n\n🇹🇷 Arşivden çıkarılıyor lütfen bekleyin.\n🇬🇧 Extracting please wait.")
+        "🇹🇷 Tavuk kuluçkaya yattı! / 🇬🇧 File downloaded.\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`" + \
+        "\n\n🇹🇷 Civcivler çıkıyor, lütfen bekleyin.\n🇬🇧 Extracting please wait.")
     EXTENSIONS = [str(x) for x in os.environ.get("EXTENSIONS",
         "7z apm arj bz2 bzip2 cab chm cpio cramfs deb dmg fat gz gzip hfs iso lzh lzma lzma2 mbr msi mslz nsis ntfs rar"+
         " rpm squashfs tar tar.bz2 tar.gz tar.xz tbz2 tgz udf vhd wim xar z zip").split()]
@@ -93,16 +93,16 @@ class Config:
         "\n🌿 Server stats / Sunucu istatistikleri: `/" + STATS_COMMAND[0] + "`" + \
         f"\n\n🍒 Supported / Destekler: `{all_supported_extensions_with_comma}`")
     UPLOAD_SUCCESS = os.environ.get('UPLOAD_SUCCESS',
-        "🇹🇷 Dosyalar yüklendi! / 🇬🇧 Files uploaded!\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`\n\n🍇 Yüklenen / Uploaded: `{}`\n" + \
+        "🇹🇷 Civcivler yumurtalarından çıktı! / 🇬🇧 Files uploaded!\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`\n\n🍇 Yüklenen / Uploaded: `{}`\n" + \
         "🍎 Boyut / Size: `{}`\n🔥 [Kaynak / Source]({})\n✅ Başarılı / Success: `{}`\n❌ Başarısız / Unsucces: `{}`")
     CLEAR_STR = os.environ.get('CLEAR_STR',
-        "🇬🇧 You\'re clean like a baby now. I deleted your files.\n🇹🇷 Şimdi bebek gibi tertemizsin. Dosyalarını sildim.")
+        "🇬🇧 You\'re clean like a baby now. I deleted your files.\n🇹🇷 Dosyalarını sildim.")
     JOIN_CHANNEL_STR = os.environ.get('JOIN_CHANNEL_STR',
         "Merhaba / Hi {}\n\n" + \
         "🇬🇧 First subscribe my channel from button, then send /start again.\n" + \
         "🇹🇷 Önce butondan kanala abone ol, sonra bana /start yaz.")
     YOU_ARE_BANNED_STR = os.environ.get('YOU_ARE_BANNED_STR',
-        "🇬🇧 You are Banned to use me.\n🇹🇷 Banlanmışsın ezik.\n\nDestek / Support: {}")
+        "🇬🇧 You are Banned to use me.\n🇹🇷 Yasaklanmışsınız.\n\nDestek / Support: {}")
     JOIN_BUTTON_STR = os.environ.get('JOIN_BUTTON_STR', "🇬🇧 Join / 🇹🇷 Katıl")
     # non-required -
 
