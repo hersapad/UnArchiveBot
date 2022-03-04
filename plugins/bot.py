@@ -99,7 +99,7 @@ async def unarchiver(client, message):
                             )
                         )
                     except UnknownError as e:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
+                        await message.reply_text("🇹🇷 Tavuk yumurtaları bırakıp kaçtı! / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -114,7 +114,7 @@ async def unarchiver(client, message):
                             os.remove(dl_full_file_path)
                         return
                     except:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x100", reply_to_message_id = message.message_id)
+                        await message.reply_text("🇹🇷 Tavuk yumurtaları bırakıp kaçtı! / 🇬🇧 Download Failed.\nerror code: x100", reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -138,7 +138,7 @@ async def unarchiver(client, message):
                         )
                     ##################
                     except UnknownError as e:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
+                        await message.reply_text("🇹🇷 Tavuk yumurtaları bırakıp kaçtı! / 🇬🇧 Download Failed.\nerror code 148:\n\n" + e.x, reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -154,7 +154,7 @@ async def unarchiver(client, message):
                         return
                     ##########################
                     except:
-                        await message.reply_text("🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
+                        await message.reply_text("🇹🇷 Tavuk yumurtaları bırakıp kaçtı! / 🇬🇧 Download Failed.\nerror code: x101", reply_to_message_id = message.message_id)
                         ############
                         if Config.ONE_PROCESS_PER_USER:
                             try:
@@ -172,7 +172,7 @@ async def unarchiver(client, message):
                 if download_location is None:
                     try:
                         await client.edit_message_text(
-                            text='🇹🇷 İndirme Başarısız / 🇬🇧 Download Failed.\nerror code: x102',
+                            text='🇹🇷 Tavuk yumurtaları bırakıp kaçtı! / 🇬🇧 Download Failed.\nerror code: x102',
                             chat_id=chat_id,
                             message_id=downloadingmessage.message_id
                         )
@@ -376,7 +376,7 @@ async def unarchiver(client, message):
                                     )
                                 )
                             except:
-                                await message.reply_text("🇬🇧 Cannot send\n🇹🇷 Gönderilemedi:\n\n" + "`" + finame + "`", reply_to_message_id = downloadingmessage.message_id)
+                                await message.reply_text("🇬🇧 Cannot send\n🇹🇷 Civciv yumurtada kaldı:\n\n" + "`" + finame + "`", reply_to_message_id = downloadingmessage.message_id)
                                 unsuccesscount += 1
                             time.sleep(Config.SLEEP_TIME_BETWEEN_SEND_FILES) # sleep for speed
                             try:
