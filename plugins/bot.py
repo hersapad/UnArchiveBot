@@ -36,7 +36,7 @@ async def unarchiver(client, message):
             try:
                 filenameformessage = message.reply_to_message.document.file_name
             except:
-                await message.reply_text("Send and read / Gönder ve oku (x345): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+                await message.reply_text("Send and read / Tavuğa yem ver (x345): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
                 return
             sizeformessage = message.reply_to_message.document.file_size
             if message.reply_to_message.media and filenameformessage.endswith(tuple(Config.EXTENSIONS)):
@@ -65,7 +65,7 @@ async def unarchiver(client, message):
                             "🇹🇷 Şu parolayla indiriliyor: `" + password[1] + "`\nLütfen bekle."
                 else:
                     LOGGER.info("no password.")
-                    text = "🇬🇧 Downloading without password. Please wait.\n🇹🇷 Parolasız olarak indiriliyor. Lütfen bekle."
+                    text = "🇬🇧  Please wait.\n🇹🇷 Tavuk yemini yerken lütfen bekleyiniz..."
                 #
                 downloadingmessage = await message.reply_text(
                     text=text,
@@ -266,7 +266,7 @@ async def unarchiver(client, message):
                     else:
                         LOGGER.warning('Unable to extract archive!') # burda hata verip çıkar.
                         await client.edit_message_text(
-                            text="❌\n\n🇹🇷 Arşivi çıkarırken hata oluştu. Muhtemelen parola yanlış girildi.\n\n" + \
+                            text="❌\n\n🇹🇷 Tavuk aç kaldı. Muhtemelen parola yanlış girildi.\n\n" + \
                                 "🇬🇧 An error occurred while extracting the archive. Probably the password was entered incorrectly.",
                             chat_id=chat_id,
                             message_id=downloadingmessage.message_id)
@@ -289,7 +289,7 @@ async def unarchiver(client, message):
                     LOGGER.info(f'got path: {path}')
                 except NotSupportedExtractionArchive:
                     LOGGER.info("Not any valid archive.")
-                    await message.reply_text("❌\n\n🇬🇧 Not any valid archive.\n🇹🇷 Geçerli bir arşiv değil.", reply_to_message_id = message.message_id)
+                    await message.reply_text("❌\n\n🇬🇧 Not any valid archive.\n🇹🇷 Bu, tavuk yemi değil. Gariban hayvanı lütfen ishal etmeyin.", reply_to_message_id = message.message_id)
                     return
                 ####################################################3
                 start = time.time()
@@ -430,9 +430,9 @@ async def unarchiver(client, message):
                         pass
                 ##############
             else:
-                await message.reply_text("Send and read / Gönder ve oku (x225): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+                await message.reply_text("Send and read / Tavuğa yemi göster (x225): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
         else:
-            await message.reply_text("Send and read / Gönder ve oku (x230): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
+            await message.reply_text("Send and read / Tavuğa yemi göster (x230): /" + Config.HELP_COMMANDS[0], reply_to_message_id = message.message_id)
     else:
         await message.reply_text(Config.UNAUTHORIZED_TEXT_STR, reply_to_message_id = message.message_id)
 
