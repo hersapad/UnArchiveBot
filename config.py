@@ -52,7 +52,7 @@ class Config:
         "📥 Kalan yumurtalar / Remaining: {3}\n⚡️ Anlık yumurtlama hızı / Speed: {4}/s\n⌛️ Geçen Süre / Passed: {5}\n⏳ Kalan Süre / Remaining: {6}`"
     FORCE_DOC_UPLOAD = int(os.environ.get('FORCE_DOC_UPLOAD', 0))
     ONE_PROCESS_PER_USER = int(os.environ.get('ONE_PROCESS_PER_USER', 1)) # for stability
-    UNAUTHORIZED_TEXT_STR = os.environ.get('UNAUTHORIZED_TEXT_STR', "🇹🇷 Bot yalnızca ilgili grupta kullanılabilir.\n🇬🇧 This bot not for you.")
+    UNAUTHORIZED_TEXT_STR = os.environ.get('UNAUTHORIZED_TEXT_STR', "🇹🇷 Bu tavuk yalnızca kendi kümesinde yumurtlar.\n🇬🇧 This bot not for you.")
     PROGRESSBAR_LENGTH = int(os.environ.get('PROGRESSBAR_LENGTH', 25))
     ONE_PROCESS_PER_USER_STR = os.environ.get('ONE_PROCESS_PER_USER_STR',
         f"🇬🇧 1 user = 1 process.\nYou can clear your all files with /{CLEARME_COMMAND[0]}," + \
@@ -63,9 +63,9 @@ class Config:
     SLEEP_TIME_BETWEEN_SEND_FILES = int(os.environ.get('SLEEP_TIME_BETWEEN_SEND_FILES', 2)) 
     SHOW_PROGRESS_MIN_SIZE_DOWNLOAD = int(os.environ.get('SHOW_PROGRESS_MIN_SIZE_DOWNLOAD', 12*1024*1024)) # for speedy
     DOWNLOADING_STR = os.environ.get('DOWNLOADING_STR',
-        "**🇹🇷 Tavuklar kuluçkaya yatıyor / 🇬🇧 Downloading:**\n\n🎯 Name / Ad: `{}`\n❄️ Size / Boyut: `{}`\n🔑 Password / Parola: {}")
+        "**🇹🇷 Tavuklar kuluçkaya yatıyor / 🇬🇧 Eggs are approaching...:**\n\n🎯 Name / Ad: `{}`\n❄️ Size / Boyut: `{}`\n🔑 Password / Parola: {}")
     UPLOADING_STR = os.environ.get('UPLOADING_STR',
-        "**🇹🇷 Tavuklar yumurtluyor / 🇬🇧 Uploading:**\n\n🎯 Kaynak / Source: `{}`\n" + \
+        "**🇹🇷 Tavuklar yumurtluyor / 🇬🇧 Eggs are coming...:**\n\n🎯 Kaynak / Source: `{}`\n" + \
         "🍌 Yumurta Boyutu / Source Size: `{}`\n🔑 Password / Parola: {}\n\n🦋 Anlık civciv sayısı / File Now: `{}`\n" + \
         "❄️ Size Now / Anlık yumurta sayısı: `{}`\n🥕 File Turn / Dosya Sırası: `{}`")
     DOWNLOAD_SUCCESS = os.environ.get('DOWNLOAD_SUCCESS',
@@ -87,13 +87,13 @@ class Config:
         "\n✅ `/" + UNZIP_COMMAND[0] + " Hunhj887ZunLudArt87emiS`" + \
         "\n✅ `/" + UNZIP_COMMAND[0] + " HEreis8yorupassword-parolaizZBuraya`" + \
         "\n✅ `/" + UNZIP_COMMAND[0] + " anoTherSampLe-bAskABirorNek`" + \
-        "\n\n🖼 Set thumbnail / Küçük resim ayarlama: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
-        "\n❌ Clear thumbnail / Küçük resmi temizle: `/" + CLEAR_THUMB_COMMAND[0] + "`" + \
-        "\n🌆 Show thumbnail / Küçük resmi göster: `/" + SHOW_THUMB_COMMAND[0] + "`" + \
+        "\n\n🖼 Set thumbnail / Vesikalık resim ayarlama: `/" + SAVE_THUMB_COMMAND[0] + "`" + \
+        "\n❌ Clear thumbnail / Vesikalık resmi temizle: `/" + CLEAR_THUMB_COMMAND[0] + "`" + \
+        "\n🌆 Show thumbnail / Vesikalık resmi göster: `/" + SHOW_THUMB_COMMAND[0] + "`" + \
         "\n🌿 Server stats / Sunucu istatistikleri: `/" + STATS_COMMAND[0] + "`" + \
         f"\n\n🍒 Supported / Destekler: `{all_supported_extensions_with_comma}`")
     UPLOAD_SUCCESS = os.environ.get('UPLOAD_SUCCESS',
-        "🇹🇷 Civcivler yumurtalarından çıktı! / 🇬🇧 Files uploaded!\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`\n\n🍇 Yüklenen / Uploaded: `{}`\n" + \
+        "🇹🇷 Civcivler yumurtalarından çıktı! / 🇬🇧 Al sana yumurta!\n🇹🇷 Geçen Süre / 🇬🇧 Time: `{}`\n\n🍇 Yüklenen / Uploaded: `{}`\n" + \
         "🍎 Boyut / Size: `{}`\n🔥 [Kaynak / Source]({})\n✅ Başarılı / Success: `{}`\n❌ Başarısız / Unsucces: `{}`")
     CLEAR_STR = os.environ.get('CLEAR_STR',
         "🇬🇧 You\'re clean like a baby now. I deleted your files.\n🇹🇷 Dosyalarını sildim.")
